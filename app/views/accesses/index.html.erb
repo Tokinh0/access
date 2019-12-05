@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Ip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accesses.each do |access| %>
+      <tr>
+        <td><%= access.latitude %></td>
+        <td><%= access.longitude %></td>
+        <td><%= access.ip %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

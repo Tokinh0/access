@@ -1,0 +1,17 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    window.onload = function (){
+        $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+            function(json) {
+                let latitude = '';
+                let longitude = '';
+                let ip = json.ip;
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    latitude = position.coords.latitude;
+                    longitude = position.coords.longitude;
+                    $.post( "accesses", { access: { ip: ip, latitude: latitude, longitude: longitude} } );
+                });
+            }
+        );
+    };
+</script>
