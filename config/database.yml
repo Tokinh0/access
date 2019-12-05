@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  host: ec2-107-22-234-103.compute-1.amazonaws.com
+  encoding: unicode
+  database: d3c3qurit8eei4
+  username: ajcxwbgbofexxs
+  password: 5227fca3f46014d72e744a40f3461bdd9208ddcbc3beb0f3cc0e085977456021
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  host: 127.0.0.1
+  encoding: unicode
+  database: access_test
+  username: postgres
+  password: toor
+  pool: 5
+  timeout: 5000
