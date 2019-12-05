@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  host: 127.0.0.1
+  encoding: unicode
+  database: access
+  username: USERNAME
+  password: PASSWORD
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  host: 127.0.0.1
+  encoding: unicode
+  database: access_test
+  username: USERNAME
+  password: PASSWORD
+  pool: 5
+  timeout: 5000
